@@ -1,92 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reward Counter DApp</title>
-    <!-- Stellar SDK via CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-sdk/10.4.1/stellar-sdk.min.js"></script>
-    <!-- Freighter API via CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-freighter-api/1.1.2/index.min.js"></script>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a2e;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background-color: #16213e;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-        }
-        h1 { margin-bottom: 1.5rem; color: #e94560; }
-        .count-display {
-            font-size: 3rem;
-            font-weight: bold;
-            margin: 1rem 0;
-            color: #0f3460;
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 1rem;
-        }
-        button {
-            background-color: #e94560;
-            color: white;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            font-size: 1rem;
-            border-radius: 6px;
-            cursor: pointer;
-            margin: 0.5rem;
-            transition: opacity 0.2s;
-        }
-        button:hover { opacity: 0.9; }
-        button:disabled { background-color: #666; cursor: not-allowed; }
-        .address-container {
-            margin-top: 1rem;
-            font-size: 0.8rem;
-            color: #aaa;
-            word-break: break-all;
-        }
-        #contractIdInput {
-            width: 90%;
-            padding: 0.8rem;
-            border-radius: 6px;
-            border: 1px solid #0f3460;
-            margin-bottom: 1rem;
-            font-size: 1rem;
-            background-color: #1a1a2e;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Reward Counter</h1>
-        
-        <div id="setupSection">
-            <input type="text" id="contractIdInput" placeholder="Enter Contract ID" />
-            <br/>
-            <button id="connectBtn">Connect Freighter</button>
-        </div>
-
-        <div id="dappSection" style="display: none;">
-            <div class="address-container" id="addressDisplay">Not connected</div>
-            <div class="count-display" id="countDisplay">?</div>
-            <button id="getBtn">Refresh Count</button>
-            <button id="incrementBtn">Increment (+1)</button>
-        </div>
-        <div id="statusMsg" style="margin-top: 15px; font-size: 0.9rem; color: #ffcc00;"></div>
-    </div>
-    <script src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reward Counter DApp — Stellar Soroban</title>
+    <meta name="description" content="A decentralized reward counter built on Stellar Soroban smart contracts. Connect your Freighter wallet and interact with the blockchain." />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

@@ -1,79 +1,71 @@
-# Reward Counter 💸
+# 🏆 Reward Counter — Stellar Soroban DApp
 
-A fully functional, decentralized Web3 application built on the Stellar Soroban blockchain. This dApp allows users to track a global on-chain counter, securely interacting with the testnet.
+A premium, decentralized Reward Counter application built on the **Stellar Soroban** blockchain. This dApp allows users to connect their Freighter wallet and securely increment a global counter on the blockchain.
 
-## Deployment Details
-
-*   **Contract ID / Address:** `CC34OUN4BYZX4DDDQEGPHNBPC632H75EBHKXVIVGZD4C46PYDDWXYXR4a82e4ed3bc075c7c`
+## 🔗 Live Implementation
+*   **Contract ID:** `CBJWN6EB2YYSGJYZBI57IXHM3HHRSYT3T2BO5GTSBOK2NSKHQBMLVPDJ`
 *   **Network:** Stellar Testnet
+*   **RPC Endpoint:** `https://soroban-testnet.stellar.org`
 
-## Dashboard Preview
+## 🕹️ Dashboard Preview
+The Reward Counter features a high-fidelity glassmorphism UI with real-time blockchain synchronization.
 
-![Dashboard Overview](./dashboard-3.png)
+![Dashboard Preview](./dashboard-3.png)
 
-## Stellar Labs
+## 🏗️ Stellar Laboratory Integration
+Directly interact with and verify your contract state using the Stellar Laboratory.
 
-![Stellar Labs](./stellar-lab-3.png)
+![Stellar Lab Integration](./stellar-lab-3.png)
 
-## Features ✨
+## ✨ Features
+-   **Modern React UI**: Built with React 19 and Vite for lightning-fast performance.
+*   **Premium Design**: Sleek glassmorphism theme, smooth animations, and toast notifications.
+*   **Non-Custodial**: Connect safely using the [Freighter Browser Extension](https://www.freighter.app/).
+*   **Auto-Funding**: Automatically detects new accounts and funds them via Friendbot on Testnet.
+*   **Robust TX Handling**: Uses `prepareTransaction` for reliable simulation and assembly.
 
-*   **Non-Custodial Wallet Integration:** Securely connect and sign transactions using the [Freighter Browser Extension](https://www.freighter.app/).
-*   **On-Chain State Management:** The smart contract stores and increments a public counter.
-*   **Real-time Ledger Interaction:** Read and write directly to the Stellar testnet with real-time feedback.
-*   **Vanilla JS Frontend:** A lightweight, dependency-free frontend demonstrating direct integration with `@stellar/stellar-sdk` and `@stellar/freighter-api`.
+## 🏗️ Project Structure
+```text
+reward-counter/
+├── contracts/          # Rust Smart Contracts (Soroban)
+│   └── reward-counter/
+├── frontend/           # Modern React + Vite Application
+│   ├── src/            # UI Components & Blockchain Logic
+│   └── .env            # Environment Configuration
+└── README.md           # Documentation
+```
 
-## Project Architecture 🏗️
-
-The project is divided into two main components:
-
-1.  **Smart Contract (`/contracts/reward-counter`)**: Written in Rust using the Soroban SDK. It handles the core logic for the global counter.
-2.  **Frontend (`/frontend`)**: A Vanilla HTML/JS application that interacts with the deployed contract on the Soroban Testnet.
-
----
-
-## Getting Started 🚀
+## 🚀 Getting Started
 
 ### Prerequisites
+- [Node.js](https://nodejs.org/) (v18+)
+- [Freighter Wallet](https://www.freighter.app/) (Set to **Test Net**)
 
-*   [Rust](https://www.rust-lang.org/) (v1.94+)
-*   [Stellar CLI](https://developers.stellar.org/docs/build/smart-contracts/getting-started/setup)
-*   [Freighter Wallet Extension](https://www.freighter.app/)
+### 1. Setup Frontend
+Navigate to the frontend directory and install dependencies:
+```bash
+cd frontend
+npm install
+```
 
-### 1. Smart Contract
+### 2. Configure Environment
+Create a `.env` file in the `frontend` folder (one is provided for you):
+```env
+VITE_CONTRACT_ID=CBJWN6EB2YYSGJYZBI57IXHM3HHRSYT3T2BO5GTSBOK2NSKHQBMLVPDJ
+VITE_RPC_URL=https://soroban-testnet.stellar.org
+```
 
-The contract is already deployed to the Stellar Testnet, but if you wish to deploy it yourself:
+### 3. Run Locally
+Start the development server:
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000).
 
-1. Navigate to the contract directory:
-   ```bash
-   cd contracts/reward-counter
-   ```
-2. Build the optimized `.wasm`:
-   ```bash
-   cargo build --target wasm32-unknown-unknown --release
-   ```
-3. Deploy the contract:
-   ```bash
-   stellar contract deploy \
-       --wasm target/wasm32-unknown-unknown/release/reward_counter.wasm \
-       --source my-wallet \
-       --network testnet
-   ```
+## 🛠️ Smart Contract Logic
+The contract exposes two main functions:
+1. `get_count`: Returns the current global counter value.
+2. `increment`: Increases the counter by 1 in the blockchain state.
 
-### 2. Frontend Application
-
-1. Open the `frontend` directory:
-   ```bash
-   cd frontend
-   ```
-2. Start a local server (e.g., using Python):
-   ```bash
-   python -m http.server 8000
-   ```
-3. Open your browser to `http://localhost:8000`.
-
-### Connecting your Wallet
-
-1. Install the Freighter extension.
-2. Switch the Freighter network to **Testnet**.
-3. Fund your Freighter wallet using the [Stellar Laboratory Friendbot](https://laboratory.stellar.org/#account-creator?network=test).
-4. Click **Connect Wallet** in the dApp and approve the connection.
+---
+Built with ❤️ by the Reward Counter Team.
