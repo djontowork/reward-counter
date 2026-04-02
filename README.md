@@ -3,7 +3,9 @@
 A premium, decentralized Reward Counter application built on the **Stellar Soroban** blockchain. This dApp allows users to connect their Freighter wallet and securely increment a global counter on the blockchain.
 
 ## 🔗 Live Implementation
-*   **Contract ID:** `CBJWN6EB2YYSGJYZBI57IXHM3HHRSYT3T2BO5GTSBOK2NSKHQBMLVPDJ`
+*   **Contract ID:** `CBEAXSOLUEWKWA7SVN2MJFWE2TFYM2GNFHXQNJCFEZKEG4CKN7HKN222`
+*   **Deploy Transaction:** [View on Stellar Expert](https://stellar.expert/explorer/testnet/tx/32c4175df88564cdd16a823c878b69446339af0fa5062539715335456f5cfe63)
+*   **Stellar Laboratory:** [Interact with Contract](https://lab.stellar.org/r/testnet/contract/CBEAXSOLUEWKWA7SVN2MJFWE2TFYM2GNFHXQNJCFEZKEG4CKN7HKN222)
 *   **Network:** Stellar Testnet
 *   **RPC Endpoint:** `https://soroban-testnet.stellar.org`
 
@@ -51,7 +53,7 @@ npm install
 ### 2. Configure Environment
 Create a `.env` file in the `frontend` folder (one is provided for you):
 ```env
-VITE_CONTRACT_ID=CBJWN6EB2YYSGJYZBI57IXHM3HHRSYT3T2BO5GTSBOK2NSKHQBMLVPDJ
+VITE_CONTRACT_ID=CBEAXSOLUEWKWA7SVN2MJFWE2TFYM2GNFHXQNJCFEZKEG4CKN7HKN222
 VITE_RPC_URL=https://soroban-testnet.stellar.org
 ```
 
